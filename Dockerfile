@@ -1,4 +1,6 @@
 FROM node:17 as builder
+WORKDIR /app
+COPY . .
 RUN yarn
 RUN ["yarn", "build"]
 

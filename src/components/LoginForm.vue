@@ -2,41 +2,45 @@
 export default {
   data() {
     return {
-      username: '',
-      password: '',
+      username: "",
+      password: "",
     };
   },
 };
 </script>
 
 <template>
-  <form action="/login?to=/user" method="POST">
-    <label for="username">Username</label>
-    <input type="text" v-model="username" name="username" />
-    <label for="password">Password</label>
-    <input type="password" v-model="password" name="password" />
-    <input type="submit" />
-  </form>
+  <div class="login-container">
+    <form action="/login?to=/user" method="POST">
+      <label for="username">Username</label>
+      <input type="text" v-model="username" name="username" />
+      <label for="password">Password</label>
+      <input type="password" v-model="password" name="password" />
+      <input type="submit" />
+    </form>
+  </div>
 </template>
 
 <style>
 label,
 input {
   display: block;
+  width: 100%;
+
 }
 
 input {
   margin-bottom: 10px;
+    /* max-width: 500px; */
 }
 
 label {
-  text-align: left;
+  /* text-align: left; */
 }
 
-form {
-  /* border: 1px solid darkgrey; */
+.login-container {
+  text-align: center;
   padding: 20px;
-  width: fit-content;
-  /* background-color: lightgrey; */
+  width: 100%;
 }
 </style>

@@ -5,6 +5,6 @@ RUN yarn
 RUN ["yarn", "build"]
 
 FROM nginx:latest
-WORKDIR /var/www/html
+WORKDIR /usr/share/nginx/html
 COPY --from=builder /app/dist .
 EXPOSE 80

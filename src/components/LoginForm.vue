@@ -11,7 +11,7 @@ export default {
 
 <template>
   <div class="login-container">
-    <form action="/login?to=/user" method="POST">
+    <form action="/login?to=/vm" method="POST">
       <label for="username">Username</label>
       <input type="text" v-model="username" name="username" />
       <label for="password">Password</label>
